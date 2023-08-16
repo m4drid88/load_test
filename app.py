@@ -5,4 +5,4 @@ scrap_df = pd.DataFrame({"age":[24,24],"name":["Piero","Beto"]})
 
 df = pd.concat([initial_df,scrap_df],axis=0)
 df = df.drop_duplicates(subset="name")
-scrap_df.to_csv("data.csv",index=False,mode="w")
+df.to_csv("data.csv",index=False,mode="w")
