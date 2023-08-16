@@ -1,7 +1,9 @@
-import pandas as pd
+import random
 
-data = [["Jose","Melgarejo",28]]
-colums = ["name","lastname","age"]
+# Número de líneas que deseas en data.txt
+NUM_LINES = 10
 
-df = pd.DataFrame(data,columns=colums)
-df.to_csv("data.csv",mode="a",header=False,index=False)
+with open("data.txt", "w") as f:
+    for _ in range(NUM_LINES):
+        f.write(str(random.randint(1, 10)) + "\n")
+
