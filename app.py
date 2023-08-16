@@ -1,9 +1,8 @@
-import random
+import pandas as pd
 
-# Número de líneas que deseas en data.txt
-NUM_LINES = 10
+initial_df = pd.read_csv("data.csv")
+scrap_df = pd.DataFrame({"age":[24,24],"name":["Piero","Beto"]})
 
-with open("data.txt", "w") as f:
-    for _ in range(NUM_LINES):
-        f.write(str(random.randint(1, 10)) + "\n")
-
+df = pd.concat([initial_df,scrap_df],axis=0)
+df = df.drop_duplicates(subset="name")
+scrap_df.to_csv("data.csv",index=False,mode="w")
