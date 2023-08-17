@@ -29,6 +29,8 @@ jobs:
         python -m spacy download es_core_news_sm
 
     - name: Run update_data.py script
+      env:
+        SCRAPEOP_KEY: ${{ secrets.SCRAPEOP_KEY }}
       run: python app.py
 
     - name: Commit and push changes
