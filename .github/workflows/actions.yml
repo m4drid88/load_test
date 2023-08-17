@@ -40,6 +40,6 @@ jobs:
         git add data.csv
         git add bumeran_data_pure.csv
         git add data_bumeran.csv
-        git log.txt
+        git add log.txt
         git commit -m "Update data.txt with random values" || echo "No changes to commit"
         git push
