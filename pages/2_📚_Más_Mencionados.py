@@ -2,8 +2,8 @@ import pandas as pd
 import streamlit as st
 import altair as alt
 import datetime
-from google.oauth2 import service_account
-import pandas_gbq
+# from google.oauth2 import service_account
+# import pandas_gbq
 import ast
 
 with open('style.css') as f:
