@@ -1,9 +1,9 @@
-name: Update data.txt every 5 minutes
+name: Update data_bumeran dayly
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'  # Se ejecuta cada 5 minutos
+    - cron: '0 23 * * *'  # Se ejecuta cada día a las 11pm
 
 jobs:
   update-data:
@@ -24,6 +24,10 @@ jobs:
         pip install -r requirements.txt
         # Si tienes otros paquetes que instalar, agrégalos aquí
 
+    - name: Download es_core_news_sm model for spaCy
+      run: |
+        python -m spacy download es_core_news_sm
+
     - name: Run update_data.py script
       run: python app.py
 
@@ -32,5 +36,8 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add data.csv
+        git add bumeran_data_pure.csv
+        git add data_bumeran.csv
+        git log.txt
         git commit -m "Update data.txt with random values" || echo "No changes to commit"
         git push
