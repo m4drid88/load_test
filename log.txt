@@ -37,3 +37,6 @@
 2023-08-27 23:11:21,858 Se han procesado 8 páginas.
 2023-08-27 23:11:23,681 Se han procesado 150 avisos.
 2023-08-27 23:11:28,517 Se han agregado 1 a la base de datos.
+2023-08-28 23:11:56,529 Se han procesado 9 páginas.
+2023-08-28 23:11:59,461 Se han procesado 172 avisos.
+2023-08-28 23:12:07,209 Se han agregado 24 a la base de datos.
